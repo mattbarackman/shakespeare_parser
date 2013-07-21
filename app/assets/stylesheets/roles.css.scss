@@ -6,30 +6,37 @@ thead {
   background-color: lightblue;
 }
 
-th:hover {
+th {
+  padding-left: 10px;
+  &:hover {
   background-color: #0099CC;
+  }
 }
 
 tbody tr:nth-of-type(2n+1) {
   background-color: #EEE;
 }
 
-.center {
-  text-align: center;
+td {
+  padding-left: 10px;
 }
 
-.left_align {
+.left {
   text-align: left;
 }
 
-.active.asc:after {
-  content: " ^ "
-}
-
-.active.desc:after {
-  content: " v "
-}
-
-.active {
+.active{
   background-color: #0099CC;
+
+  &.asc:after {
+    content: " [^] ";
+    float: right;
+    margin-left: 20px;
+  }
+  &.desc:after {
+    content: " [v] ";
+    float: right;
+    margin-left: 20px;
+  }
 }
+

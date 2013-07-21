@@ -1,7 +1,7 @@
 class RolesController < ApplicationController
 
   def index 
-    @roles = Role.alphabetical(new_direction)
+    @roles = Role.alphabetical("asc")
   end
 
   def alphabetical
