@@ -1,0 +1,2 @@
+# Shakespeare Parser
+This is a Ruby on Rails app that I built as part of the application process for a Web Developer role at (Groupize)[http://groupize.com/] in Boston, MA. It parses XML from Shakespeare's "Julius Caesar" into a postgres database and displays stats on individual characters in a dynamic data table. Users can click on different column headers to re-sort the table using AJAX. 
