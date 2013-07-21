@@ -1,0 +1,7 @@
+<tr>
+  <td><%= role.name %></td>
+  <td><%= role.number_of_lines %></td>
+  <td><%= "(#{role.longest_speech_length} lines) #{truncate(role.longest_speech.to_s, length: 40)}" %></td>
+  <td><%= role.number_of_scenes %></td>
+  <td><%= format_percentage(role.percentage_of_scenes) %></td>
+</tr>

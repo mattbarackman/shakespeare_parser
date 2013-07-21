@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE PLAY SYSTEM "play.dtd">
+
+<PLAY>
+  <TITLE>The Best Test Play Ever</TITLE>
+
+  <FM>
+    <P>Text placed in the public domain by Moby Lexical Tools, 1992.</P>
+    <P>SGML markup by Jon Bosak, 1992-1994.</P>
+    <P>XML version by Jon Bosak, 1996-1998.</P>
+    <P>This work may be freely copied and distributed worldwide.</P>
+  </FM>
+
+
+  <PERSONAE>
+    <TITLE>Dramatis Personae</TITLE>
+
+    <PERSONA>Matt B.</PERSONA>
+
+    <PGROUP>
+      <PERSONA>Amy B.</PERSONA>
+      <PERSONA>Roger C.</PERSONA>
+      <PERSONA>Deborah B.</PERSONA>
+      <PERSONA>Phil B.</PERSONA>
+      <GRPDESCR>My family.</GRPDESCR>
+    </PGROUP>
+
+
+    <PGROUP>
+      <PERSONA>Jessie B.</PERSONA>
+      <PERSONA>Niko B.</PERSONA>
+      <PERSONA>Chelsea K.</PERSONA>
+      <PERSONA>Barb A.</PERSONA>
+      <PERSONA>Jerry B.</PERSONA>
+      <GRPDESCR>My girlfriend's family.</GRPDESCR>
+    </PGROUP>
+
+  </PERSONAE>
+
+  <ACT>
+    <TITLE>ACT I</TITLE>
+
+    <SCENE>
+      <TITLE>SCENE I.  My Apartment.</TITLE>
+
+      <SPEECH>
+        <SPEAKER>Matt B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Jessie B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Roger C.</SPEAKER>
+        <SPEAKER>Amy B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+    </SCENE>
+
+    <SCENE>
+      <TITLE>SCENE II.  A public place.</TITLE>
+
+      <SPEECH>
+        <SPEAKER>Niko B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+    </SCENE>
+
+  </ACT>
+
+  <ACT>
+    <TITLE>ACT II</TITLE>
+
+    <SCENE>
+      <TITLE>SCENE I.  Jessie's Apartment.</TITLE>
+      <SPEECH>
+        <SPEAKER>Niko B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Jessie B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Chelsea K.</SPEAKER>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Barb A.</SPEAKER>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Jerry B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+    </SCENE>
+
+    <SCENE>
+      <TITLE>SCENE II.  My Parent's House.</TITLE>
+      <SPEECH>
+        <SPEAKER>Phil B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Jessie B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Deborah B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+
+      <SPEECH>
+        <SPEAKER>Matt B.</SPEAKER>
+        <SPEAKER>Jessie B.</SPEAKER>
+        <LINE>This is a line!</LINE>
+      </SPEECH>
+    </SCENE>
+  </ACT>
+</PLAY>
