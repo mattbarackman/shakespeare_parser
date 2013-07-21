@@ -1,12 +1,16 @@
 GroupizeApp::Application.routes.draw do
   
-  root to: "roles#index"
+  root to: "plays#index"
 
-  get 'roles/alphabetical' => 'roles#alphabetical'
-  get 'roles/line_count' => 'roles#line_count'
-  get 'roles/longest_speech' => 'roles#longest_speech'
-  get 'roles/scene_count' => 'roles#scene_count'
-  get 'roles/scene_percentage' => 'roles#scene_percentage'
+  get 'plays/:play_id/roles' => 'roles#index', as: 'play_roles'
+
+
+  # AJAX ROUTES FOR ROLES TABLE
+  get 'plays/:play_id/roles/alphabetical' => 'roles#alphabetical'
+  get 'plays/:play_id/roles/line_count' => 'roles#line_count'
+  get 'plays/:play_id/roles/longest_speech' => 'roles#longest_speech'
+  get 'plays/:play_id/roles/scene_count' => 'roles#scene_count'
+  get 'plays/:play_id/roles/scene_percentage' => 'roles#scene_percentage'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

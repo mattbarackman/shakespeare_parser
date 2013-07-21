@@ -3,11 +3,10 @@ $(document).ready ->
   $("th").click (e) ->
     e.preventDefault()
     prevDirection = "desc"  if $(this).hasClass("desc")
-    columnHeader = this
-    
+    columnHeader = this    
     rowsRequest = (action) ->
       $.ajax(
-        url: "/roles/" + action
+        url: window.location.pathname + '/' + action
         data:
           prev_direction: prevDirection
       )

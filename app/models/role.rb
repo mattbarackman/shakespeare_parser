@@ -1,6 +1,7 @@
 class Role < ActiveRecord::Base
 
   validates_presence_of :name
+  belongs_to :play
   has_and_belongs_to_many :speeches
   has_and_belongs_to_many :scenes
   # has_one :longest_speech, class_name: 'Speech', foreign_key: 'id' 

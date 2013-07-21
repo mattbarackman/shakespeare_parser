@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20130719220814) do
 
   create_table "roles", :force => true do |t|
     t.text     "name",              :null => false
+    t.integer  "play_id"
     t.integer  "number_of_lines"
     t.integer  "longest_speech_id"
     t.datetime "created_at",        :null => false

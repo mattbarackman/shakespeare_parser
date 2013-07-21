@@ -3,16 +3,16 @@ class Importer
   def self.parse_play(doc)
     play = Play.create(title: doc.css("PLAY > TITLE").inner_text)
     play_xml = doc.css("PLAY")
-    self.parse_roles(play_xml)
+    self.parse_roles(play, play_xml)
     self.parse_acts(play, play_xml)
     Role.update_stats!
   end
 
- def self.parse_roles(play_xml)
+ def self.parse_roles(play, play_xml)
    roles = unique_roles(play_xml.css("SPEAKER"))
 
    roles.each do |role|
-    Role.create(name: role)
+    play.roles << Role.create(name: role)
    end
  end
 
