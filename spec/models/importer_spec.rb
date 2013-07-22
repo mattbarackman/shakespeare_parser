@@ -3,7 +3,6 @@ require 'spec_helper'
 describe Importer do
 
   let(:doc) {
-    "doc"
     file = File.open('spec/fixtures/test_play.xml')
     doc = Nokogiri::XML(file)
   }

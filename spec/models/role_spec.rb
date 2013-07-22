@@ -7,9 +7,10 @@ describe Role do
   let!(:speech_2) {create(:speech)}
   let!(:speech_3) {create(:speech)}
 
+  it { should validate_presence_of(:name) }
   it { should have_and_belong_to_many(:scenes) }
   it { should have_and_belong_to_many(:speeches) }
-  it { should validate_presence_of(:name) }
+  it { should belong_to(:play) }
 
   it "should update stats for a role's longest_speech and number_of_lines" do
     speech_1.lines << create(:line)

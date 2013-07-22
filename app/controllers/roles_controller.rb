@@ -2,7 +2,11 @@ class RolesController < ApplicationController
 
   def index 
     @roles = Role.alphabetical("asc")
+    @play = Play.find(params[:play_id])
   end
+
+
+  # actions for roles table AJAX calls
 
   def alphabetical
     @roles = Role.alphabetical(new_direction)

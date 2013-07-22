@@ -1,6 +1,7 @@
 class Act < ActiveRecord::Base
 
   validates_presence_of :play_id, :title 
+  
   belongs_to :play
   has_many :scenes
 

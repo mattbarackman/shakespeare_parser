@@ -5,6 +5,7 @@ describe Speech do
   let(:speech) {create(:speech)}
 
   it {should belong_to(:scene)}
+  it {should validate_presence_of(:scene_id)}
   it {should have_and_belong_to_many(:roles)}
   it {should have_many(:lines)}
 
