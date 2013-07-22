@@ -6,7 +6,15 @@ feature "Interact with roles table", :js => true do
   let!(:doc) {
     file = File.open('spec/fixtures/test_play.xml')
     doc = Nokogiri::XML(file)
-    Importer.parse_play(doc)
+    tags = { play: "PLAY",
+             title: "TITLE",
+             act: "ACT",
+             scene: "SCENE",
+             speech: "SPEECH",
+             line: "LINE",
+             speaker: "SPEAKER"
+           }
+    Importer.parse_play(doc, tags)
   }
 
   scenario 'can see the list of plays' do
