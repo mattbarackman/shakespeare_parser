@@ -74,4 +74,10 @@ class Role < ActiveRecord::Base
     end
   end
 
+  ### makes names consistent
+
+  def self.canonicalize(name)
+      name.titleize
+  end
+
 end
