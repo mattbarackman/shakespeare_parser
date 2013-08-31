@@ -5,9 +5,13 @@ gem 'rails', '3.2.13'
 gem 'pg'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
 # Needed in production to run importer rake task
 gem 'nokogiri'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

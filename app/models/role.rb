@@ -24,48 +24,6 @@ class Role < ActiveRecord::Base
     (100 * number_of_scenes / Scene.total_scenes.to_f).round
   end
 
-  #### class methods for sorting roles table
-
-  def self.alphabetical(direction)
-    if direction == "asc"
-      self.order(:name).first(10)
-    else
-      self.order(:name).last(10).reverse
-    end
-  end
-
-  def self.line_count(direction)
-    if direction == "asc"
-      self.order("number_of_lines ASC").limit(10)
-    else
-      self.order("number_of_lines DESC").limit(10)
-    end
-  end
-
-  def self.longest_speeches(direction)
-    if direction == "asc"
-      all.sort_by {|role| role.longest_speech_length}.first(10)
-    else
-      all.sort_by {|role| role.longest_speech_length}.reverse.first(10)
-    end
-  end
-
-  def self.scene_count(direction)
-    if direction == "asc"
-      all.sort_by {|role| role.number_of_scenes}.first(10)
-    else
-      all.sort_by {|role| role.number_of_scenes}.reverse.first(10)
-    end
-  end
-
-  def self.percentage_of_scenes(direction)
-    if direction == "asc"
-      all.sort_by {|role| role.percentage_of_scenes}.first(10)
-    else
-      all.sort_by {|role| role.percentage_of_scenes}.reverse.first(10)
-    end
-  end
-
   def self.update_stats!
     self.all.each do |role|
       role.number_of_lines = role.speeches.inject(0) {|sum, speech| sum += speech.total_lines}
