@@ -16,7 +16,7 @@ class Speech < ActiveRecord::Base
     lines.map {|line| line.content}.join(" ")
   end
 
-  def to_s
+  def display
     "#{format_reference} #{full_text}..."
   end
 

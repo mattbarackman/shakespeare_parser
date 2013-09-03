@@ -52,18 +52,4 @@ describe Role do
     expect(role.percentage_of_scenes).to eq(25)
   end
 
-  it "should return a list of top 10 roles in alphabetical asc order" do
-    names = %w(aaron brian casey david ernie frank george howard isla jackie leo)
-    names.each {|name| create(:role, name: name)}
-    expect(Role.alphabetical("asc").count).to be(10)
-    expect(Role.alphabetical("asc").first.name).to eq('aaron')
-  end
-
-  it "should return a list of top 10 roles in alphabetical desc order" do
-    names = %w(aaron brian casey david ernie frank george howard isla jackie leo)
-    names.each {|name| create(:role, name: name)}
-    expect(Role.alphabetical("desc").count).to be(10)
-    expect(Role.alphabetical("desc").first.name).to eq('leo')
-  end
-
 end

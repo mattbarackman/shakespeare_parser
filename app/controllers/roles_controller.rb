@@ -1,8 +1,9 @@
 class RolesController < ApplicationController
 
   def index 
-    @roles = Role.order(:name)
-    @play = Play.find(params[:play_id])
+    play_id = params[:play_id]
+    @roles = Role.order(:name).where(play_id: play_id)
+    @play = Play.find(play_id)
   end
 
 end

@@ -44,41 +44,41 @@ feature "Interact with roles table", :js => true do
 
     visit root_path
     click_link('The Best Test Play Ever')
-    find('#alphabetical').click
+    all("th")[0].click
     sleep(0.5)
     expect(first('tr:first-child > td:first-child').text).to eq "Roger C."
 
   end
 
-  scenario 'roles should be sorted by number of lines descending after clicking the number of lines header' do
+  scenario 'roles should be sorted by number of lines ascending after clicking the number of lines header' do
 
     visit root_path
     click_link('The Best Test Play Ever')
-    find('#line_count').click
+    all("th")[1].click
+    sleep(0.5)
+    expect(first('tr:first-child > td:first-child').text).to eq "Barb A."
+
+  end
+
+  scenario 'roles should be sorted by number of lines descending after clicking the number of lines header twice' do
+
+    visit root_path
+    click_link('The Best Test Play Ever')
+    all("th")[1].click
+    sleep(0.5)
+    all("th")[1].click
     sleep(0.5)
     expect(first('tr:first-child > td:first-child').text).to eq "Jessie B."
 
   end
 
-  scenario 'roles should be sorted by number of lines ascending after clicking the number of lines header twice' do
+  scenario 'roles should be sorted by longest speech ascending after clicking the longest speech header' do
 
     visit root_path
     click_link('The Best Test Play Ever')
-    find('#line_count').click
+    all("th")[2].click
     sleep(0.5)
-    find('#line_count').click
-    sleep(0.5)
-    expect(first('tr:first-child > td:first-child').text).to eq "Phil B."
-
-  end
-
-  scenario 'roles should be sorted by longest speech descending after clicking the longest speech header' do
-
-    visit root_path
-    click_link('The Best Test Play Ever')
-    find('#longest_speech').click
-    sleep(0.5)
-    expect(first('tr:first-child > td:first-child').text).to eq "Matt B."
+    expect(first('tr:first-child > td:first-child').text).to eq "Barb A."
 
   end
 
@@ -86,55 +86,55 @@ feature "Interact with roles table", :js => true do
 
     visit root_path
     click_link('The Best Test Play Ever')
-    find('#longest_speech').click
+    all("th")[2].click
     sleep(0.5)
-    find('#longest_speech').click
-    sleep(0.5)
-    expect(first('tr:first-child > td:first-child').text).to eq "Barb A."
-
-  end
-
-  scenario 'roles should be sorted by number_of_scenes descending after clicking the number_of_scenes header' do
-
-    visit root_path
-    click_link('The Best Test Play Ever')
-    find('#scene_count').click
+    all("th")[2].click
     sleep(0.5)
     expect(first('tr:first-child > td:first-child').text).to eq "Jessie B."
 
   end
 
-  scenario 'roles should be sorted by number_of_scenes ascending after clicking the number_of_scenes header twice' do
+  scenario 'roles should be sorted by number_of_scenes ascending after clicking the number_of_scenes header' do
 
     visit root_path
     click_link('The Best Test Play Ever')
-    find('#scene_count').click
+    all("th")[3].click
     sleep(0.5)
-    find('#scene_count').click
-    sleep(0.5)
-    expect(first('tr:first-child > td:first-child').text).to eq "Deborah B."
+    expect(first('tr:first-child > td:first-child').text).to eq "Amy B."
 
   end
 
-  scenario 'roles should be sorted by percentage of scenes descending after clicking the percentage of scenes header' do
+  scenario 'roles should be sorted by number_of_scenes descending after clicking the number_of_scenes header twice' do
 
     visit root_path
     click_link('The Best Test Play Ever')
-    find('#scene_percentage').click
+    all("th")[3].click
+    sleep(0.5)
+    all("th")[3].click
     sleep(0.5)
     expect(first('tr:first-child > td:first-child').text).to eq "Jessie B."
 
   end
 
-  scenario 'roles should be sorted by percentage of scenes ascending after clicking the percentage of scenes header twice' do
+  scenario 'roles should be sorted by percentage of scenes ascending after clicking the percentage of scenes header' do
 
     visit root_path
     click_link('The Best Test Play Ever')
-    find('#scene_percentage').click
+    all("th")[4].click
     sleep(0.5)
-    find('#scene_percentage').click
+    expect(first('tr:first-child > td:first-child').text).to eq "Amy B."
+
+  end
+
+  scenario 'roles should be sorted by percentage of scenes descending after clicking the percentage of scenes header twice' do
+
+    visit root_path
+    click_link('The Best Test Play Ever')
+    all("th")[4].click
     sleep(0.5)
-    expect(first('tr:first-child > td:first-child').text).to eq "Deborah B."
+    all("th")[4].click
+    sleep(0.5)
+    expect(first('tr:first-child > td:first-child').text).to eq "Jessie B."
 
   end
 

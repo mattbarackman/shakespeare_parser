@@ -8,7 +8,7 @@ end
 
 namespace :import do
   desc "Import the Julius Caesar XML into Database"
-  task :j_caesar => :environment do
+  task :play => :environment do
     tags = { play: "PLAY",
              title: "TITLE",
              act: "ACT",
@@ -18,7 +18,13 @@ namespace :import do
              speaker: "SPEAKER"
            }
 
-    import_play('lib/tasks/plays/j_caesar.xml', tags)
+    import_play("lib/tasks/plays/#{ARGV.last}", tags)
   end
 end
 
+desc "No operation task for file name"
+task ARGV.last.to_sym do
+  # no operation. needed b/c rake tries running 
+  # a rake task associated with all arguments,
+  # including the name of the file.
+end
